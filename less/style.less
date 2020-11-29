@@ -1,0 +1,171 @@
+body {
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.header {
+  margin: 0;
+  margin-bottom: 49px;
+  display: inline-block;
+  font-family: 'Space Grotesk', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 72px;
+  line-height: 120%;
+  text-transform: uppercase;
+  color: #f4f4f4;
+  background: #1519ff;
+}
+
+.users {
+  padding: 96px 48px;
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+  .user-card {
+    margin-right: 32px;
+    margin-bottom: 33px;
+    display: flex;
+    align-items: stretch;
+    justify-content: flex-start;
+    flex: 1;
+
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
+
+    &__image {
+      width: 100%;
+
+      img {
+        min-width: 100%;
+      }
+    }
+
+    &__info {
+      padding: 24px 32px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      border-top: 1px solid rgba(0, 0, 0, 0.3);
+    }
+
+    &__name {
+      margin-top: 0;
+      margin-bottom: 4px;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 140%;
+      text-transform: uppercase;
+      color: #000000;
+    }
+
+    &__job {
+      font-family: 'HelveticaNeueCyr', sans-serif;
+      margin-bottom: 24px;
+      font-size: 16px;
+      line-height: 170%;
+      color: #676767;
+    }
+
+    &__time {
+      font-family: 'HelveticaNeueCyr', sans-serif;
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 170%;
+      color: #000000;
+    }
+
+    &__description {
+      margin: 0;
+      font-family: 'HelveticaNeueCyr', sans-serif;
+      font-size: 16px;
+      line-height: 170%;
+      color: #676767;
+    }
+
+    &:nth-child(3),
+    &:last-child {
+      flex-direction: row-reverse;
+      margin-bottom: 0;
+
+      .user-card__info {
+        padding-left: 0;
+      }
+    }
+  }
+}
+
+.offer {
+  padding: 96px 48px;
+
+  &__wrapper {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+
+  &-date {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    &__time {
+      margin-bottom: 27px;
+      text-transform: uppercase;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 140%;
+      color: #000000;
+
+      &:last-child {
+        margin-bottom: 48px;
+      }
+
+      span {
+        margin-left: 14px;
+        text-transform: lowercase;
+        font-family: 'HelveticaNeueCyr', sans-serif;
+        font-size: 16px;
+        line-height: 170%;
+        color: #676767;
+      }
+    }
+    &__description {
+      font-family: 'HelveticaNeueCyr', sans-serif;
+      font-size: 24px;
+      line-height: 170%;
+      color: #676767;
+    }
+  }
+}
+
+@font-face {
+  font-family: 'HelveticaNeueCyr';
+  src: url('/fonts/HelveticaNeueCyr-Bold.eot');
+  src: local('/fonts/HelveticaNeueCyr-Bold'),
+    url('/fonts/HelveticaNeueCyr-Bold.eot?#iefix') format('embedded-opentype'),
+    url('/fonts/HelveticaNeueCyr-Bold.woff2') format('woff2'),
+    url('/fonts/HelveticaNeueCyr-Bold.woff') format('woff'),
+    url('/fonts/HelveticaNeueCyr-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'HelveticaNeueCyr';
+  src: url('/fonts/HelveticaNeueCyr-Roman.eot');
+  src: local('/fonts/HelveticaNeueCyr-Roman'),
+    url('/fonts/HelveticaNeueCyr-Roman.eot?#iefix') format('embedded-opentype'),
+    url('/fonts/HelveticaNeueCyr-Roman.woff2') format('woff2'),
+    url('/fonts/HelveticaNeueCyr-Roman.woff') format('woff'),
+    url('/fonts/HelveticaNeueCyr-Roman.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}

@@ -6,7 +6,6 @@ var gulp = require('gulp'),
   notify = require('gulp-notify'),
   postcss = require('gulp-postcss'),
   autoprefixer = require('autoprefixer'),
-  babel = require('gulp-babel'),
   cssnano = require('cssnano');
 
 //build
@@ -62,7 +61,12 @@ const removeDocs = () => {
 const compileStyle = () => {
   var plugins = [autoprefixer(), cssnano()];
   return gulp
-    .src(['less/style.less', 'less/media.less'])
+    .src([
+      'css/normalize.css',
+      'less/style.less',
+      'less/tablet-query.less',
+      'less/mobile-query.less',
+    ])
     .pipe(
       less({
         outputStyle: 'expand',
@@ -74,7 +78,7 @@ const compileStyle = () => {
     .pipe(browserSync.stream());
 };
 
-const compile = gulp.parallel(compileScript, compileStyle);
+const compile = gulp.parallel(compileStyle);
 
 const build = gulp.series(
   removeDocs,
@@ -107,10 +111,10 @@ const watchMarkup = (done) => {
   done();
 };
 
-const watchScript = (done) => {
-  gulp.watch(['js/*.js', '!js/scripts.min.js'], gulp.series(compileScript));
-  done();
-};
+// const watchScript = (done) => {
+//   gulp.watch(['js/*.js', '!js/scripts.min.js'], gulp.series(compileScript));
+//   done();
+// };
 
 const watchStyle = (done) => {
   gulp.watch(
@@ -120,7 +124,7 @@ const watchStyle = (done) => {
   done();
 };
 
-const watch = gulp.parallel(watchMarkup, watchScript, watchStyle);
+const watch = gulp.parallel(watchMarkup, watchStyle);
 
 const defaultTasks = gulp.parallel(serve, watch); //одновременно
 

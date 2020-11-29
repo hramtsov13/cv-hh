@@ -1,0 +1,63 @@
+@media (max-width: 575.98px) {
+  .header {
+    width: auto;
+    font-size: 48px;
+    margin-bottom: 48px;
+    font-weight: 400;
+  }
+  .users {
+    padding: 76px 24px;
+
+    .user-card {
+      flex-direction: column-reverse;
+      margin-right: 0px;
+      margin-bottom: 48px;
+
+      &__image {
+        width: 100%;
+
+        img {
+          min-width: 100%;
+          min-height: 100%;
+        }
+      }
+
+      &__info {
+        padding: 16px 0px;
+      }
+
+      &__name {
+        margin-bottom: 4px;
+        font-size: 16px;
+      }
+
+      &__job {
+        margin-bottom: 10px;
+        font-size: 12px;
+      }
+
+      &__time {
+        margin-bottom: 8px;
+        font-size: 12px;
+      }
+
+      &__description {
+        font-size: 12px;
+      }
+
+      &:nth-child(3),
+      &:last-child {
+        flex-direction: column-reverse;
+        margin-bottom: 48px;
+
+        .user-card__info {
+          padding-left: 0;
+        }
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+} ;

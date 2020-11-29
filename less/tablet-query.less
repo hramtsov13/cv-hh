@@ -1,0 +1,51 @@
+@media (max-width: 767.98px) {
+  .header {
+    width: 100%;
+    font-size: 48px;
+    margin-bottom: 48px;
+    font-weight: 400;
+  }
+  .users {
+    padding: 76px 32px;
+
+    .user-card {
+      margin-right: 0px;
+      margin-bottom: 49px;
+
+      &__info {
+        padding: 20px 18px;
+      }
+
+      &__name {
+        font-size: 18px;
+      }
+
+      &__job {
+        margin-bottom: 20px;
+        font-size: 14px;
+      }
+
+      &__time {
+        font-size: 14px;
+      }
+
+      &__description {
+        font-size: 14px;
+      }
+
+      &:nth-child(3),
+      &:last-child {
+        flex-direction: row;
+        margin-bottom: 49px;
+
+        .user-card__info {
+          padding-left: 18px;
+        }
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+} ;
